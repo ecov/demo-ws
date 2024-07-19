@@ -1,0 +1,4 @@
+fastapi
+uvicorn[standard]>=0.30.1
+python-jose>=3.0.0
+appengine-python-standard>=1.0.0
