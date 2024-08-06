@@ -1,4 +1,4 @@
-FROM python:3.11-slim as builder
+FROM python:3.11-slim AS builder
 
 RUN apt-get update
 RUN apt-get install -y gdal-bin libgdal-dev g++ libpq-dev python3.11-dev
@@ -9,7 +9,7 @@ RUN pip install -r requirements.txt
 RUN export FLASK_APP=app.py
 
 
-FROM builder as runtime
+FROM builder AS runtime
 
 EXPOSE 8000
 
